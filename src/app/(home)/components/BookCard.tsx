@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const BookCard = ({ book }: { book: Book[] }) => {
+const BookCard = ({ book }: { book: Book }) => {
   return (
     <div className="flex gap-5 border border-neutral-800 p-5 shadow-md rounded">
       <Image

@@ -23,7 +23,7 @@ const Banner = () => {
           sizes="100vw"
           style={{ width: "auto", height: "18rem" }}
         />
-        <h1 className="absolute left-10 top-1/2 w-full max-w-3xl -translate-y-1/2 text-5xl font-semibold tracking-tight text-white">
+        <h1 className="absolute left-10 top-1/2 w-full max-w-3xl -translate-y-1/2 text-2xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white">
           Discover, Connect, and Explore Worlds Between Pages.
         </h1>
       </div>
