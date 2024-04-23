@@ -7,7 +7,8 @@ const SingleBookPage = async ({ params }: { params: { bookId: string } }) => {
   let book: Book | null = null;
   try {
     const response = await fetch(
-      `${process.env.BACKEND_URL}/books/${params.bookId}`
+      `${process.env.BACKEND_URL}/books/${params.bookId}`,
+      { cache: "no-store" }
     );
     if (!response.ok) {
       throw new Error("Error fetching book");
