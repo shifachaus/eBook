@@ -32,7 +32,6 @@ const SingleBookPage = async ({ params }: { params: { bookId: string } }) => {
         <p className="mt-5 text-md text-neutral-300 leading-8">
           {book.description}
         </p>
-        {/* <DownloadButton fileLink={book.file} /> */}
       </div>
       <div className="flex justify-end">
         <Image
