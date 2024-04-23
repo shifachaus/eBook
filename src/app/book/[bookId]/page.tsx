@@ -1,6 +1,7 @@
 import { Book } from "@/types";
 import Image from "next/image";
 import React from "react";
+import DownloadButton from "./components/DownloadButton";
 
 const SingleBookPage = async ({ params }: { params: { bookId: string } }) => {
   let book: Book | null = null;
@@ -21,7 +22,7 @@ const SingleBookPage = async ({ params }: { params: { bookId: string } }) => {
   }
 
   return (
-    <div className="mx-auto grid max-w-6xl grid-cols-3 gap-10 px-5 py-20">
+    <div className="mx-auto grid max-w-6xl grid-cols-3 gap-10 px-5 py-20 h-screen">
       <div className="col-span-2 pr-16 ">
         <h2 className="mb-5 text-5xl font-bold leading-[1.1] text-neutral-300">
           {book.title}
@@ -32,6 +33,7 @@ const SingleBookPage = async ({ params }: { params: { bookId: string } }) => {
         <p className="mt-5 text-md text-neutral-300 leading-8">
           {book.description}
         </p>
+        <DownloadButton fileLink={book.file.url} />
       </div>
       <div className="flex justify-end">
         <Image
@@ -41,7 +43,7 @@ const SingleBookPage = async ({ params }: { params: { bookId: string } }) => {
           height={0}
           width={0}
           sizes="100vw"
-          style={{ width: "auto", height: "auto" }}
+          style={{ width: "auto", height: "300px" }}
         />
       </div>
     </div>
